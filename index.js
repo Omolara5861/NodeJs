@@ -17,6 +17,12 @@ msgLogger.on('message', data => {
         if(err) throw err;
         console.log('Folder Created!');
     })
+
+     //Created a file to log the messages
+     fs.writeFile(path.join(__dirname, 'messages', 'messages.txt'), '', err => {
+        if(err) throw err;
+        console.log('File Created!');
+    })
 })
 
 
