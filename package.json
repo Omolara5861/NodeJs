@@ -4,7 +4,8 @@
   "description": "Node crash Course (My First Node Course)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node index",
+    "dev": "nodemon index"
   },
   "author": "Laravel",
   "license": "ISC",
