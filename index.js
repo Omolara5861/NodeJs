@@ -15,13 +15,23 @@ const server = http.createServer((req , res) => {
             res.end(content);
         })
     }
-    else if(req.url === '/about') {
+    if(req.url === '/about') {
         fs.readFile(path.join(__dirname, 'public', 'about.html'), (err, content) => {
             if (err) throw err;
             res.writeHead(200, {'Content-Type': 'text/html'});
             res.end(content);
         })
     }
+    if(req.url === '/api/users') {
+        const users = [
+            {'name': 'Nelson', 'age': 22, 'Nationality': 'Nigerian'},
+        {'name': 'Luciana', 'age': 24, 'Nationality': 'American'},
+        {'name': 'Priyanka', 'age': 27, 'Nationality': 'Indian'}
+    ];
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    res.end(JSON.stringify(users));
+}
+    
 });
 
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
