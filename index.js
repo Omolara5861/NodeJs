@@ -5,10 +5,10 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const port = process.env.PORT || 1908;
+const PORT = process.env.PORT || 1908;
 
 const server = http.createServer((req , res) => {
 
 });
 
-
+server.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
