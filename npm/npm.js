@@ -37,7 +37,8 @@ const underscore = require('underscore');
 const result = underscore.contains([3,4,5], 0);
 console.log(result);
 
-//npm list 
+
+//npm list - list all the packages that a project depends on 
 
 //Viewing Registry Info for a Package
 //'npm view package-name' - shows the registry info of a package
