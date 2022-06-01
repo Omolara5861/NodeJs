@@ -1,4 +1,4 @@
-//Getting Superheroes Name 
+//Getting Superheroes Names 
 const superheroes = require('superheroes');
 
 //Generating all Superheroes Names
@@ -13,4 +13,18 @@ console.log(allSuperheroes);
 //Log random Superheroes Name to the console
 console.log(randomSuperheroes);
 
+// DIY Challenge
+//Getting Supervillians Name 
+const supervillains = require('supervillains');
 
+//Generating all Superheroes Names
+const allSupervillains = supervillains.all;
+
+//Generating random Supervillains Names
+const randomSupervillains = supervillains.random();
+
+//Log all Supervillains Name to the console
+console.log(allSupervillains);
+
+//Log random Supervillains Name to the console
+console.log(randomSupervillains);
