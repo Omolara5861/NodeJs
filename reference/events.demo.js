@@ -7,7 +7,7 @@ class MyEmitter extends eventEmitter {}
 const myEmitter = new MyEmitter();
 
 //Event Listener
-myEmitter.on('lara', () => console.log('Lara Got it!'));
+myEmitter.on('lara', (e) => console.log('Logging', e));
 
 //Init Event
-myEmitter.emit('lara');
+myEmitter.emit('lara', {msg: 'Lara Got it!'});
