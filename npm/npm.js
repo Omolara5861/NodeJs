@@ -36,3 +36,10 @@ const underscore = require('underscore');
 //Using the contain method to check for a number in an array
 const result = underscore.contains([3,4,5], 0);
 console.log(result);
+
+//npm list 
+
+//Viewing Registry Info for a Package
+//'npm view package-name' - shows the registry info of a package
+//'npm view package-name dependencies' - shows the dependencies of a package
+//'npm view package-name versions' - shows all the versions of a package
