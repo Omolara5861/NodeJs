@@ -13,6 +13,7 @@ console.log(allSuperheroes);
 //Log random Superheroes Name to the console
 console.log(randomSuperheroes);
 
+
 // DIY Challenge
 //Getting Supervillians Name 
 const supervillains = require('supervillains');
@@ -28,3 +29,10 @@ console.log(allSupervillains);
 
 //Log random Supervillains Name to the console
 console.log(randomSupervillains);
+
+//Using Underscore Library
+const underscore = require('underscore');
+
+//Using the contain method to check for a number in an array
+const result = underscore.contains([3,4,5], 0);
+console.log(result);
