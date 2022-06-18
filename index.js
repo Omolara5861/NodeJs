@@ -25,12 +25,12 @@ app.get('/bmicalculator', (req, res) => {
 })
 
 app.post('/bmicalculator', (req, res) => {
-    let width = Number(req.body.width);
-    let height = Number(req.body.height);
-    let n = width + height;
+    let weight = parseFloat(req.body.weight);
+    let height = parseFloat(req.body.height);
+    let bmi = weight / (height * height);
 
 
-    res.send("Your BMI is " + n);
+    res.send("Your BMI is " + bmi);
 })
 
 const PORT = process.env.PORT || 4300;
