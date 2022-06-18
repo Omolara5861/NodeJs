@@ -19,6 +19,20 @@ app.post('/', (req, res) => {
     res.send("The result of your entry is " + result);
 })
 
+app.get('/', (req, res) => {
+    res.send('<h1>BMI Calculator</h1>')
+    res.sendFile(__dirname + '/project/calculator/bmiCalculator.html');
+})
+
+app.post('/bmicalculator', (req, res) => {
+    let width = Number(req.body.width);
+    let height = Number(req.body.height);
+    let n = width + height;
+
+
+    res.send("Your BMI is " + n);
+})
+
 const PORT = process.env.PORT || 4300;
 
 app.listen(PORT, () => {
