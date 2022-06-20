@@ -17,8 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Initing the middleware
 // app.use(logger);
 
-//Running members api
-app.use('api/members','router/api/members');
+//Members API Routes
+app.use('/api/members', require('./router/api/members'));
 const PORT = process.env.PORT || 4300;
 
 app.listen(PORT, () => {
