@@ -17,24 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Initing the middleware
 // app.use(logger);
 
-// Dealing with JSONs in express 
-const members = require('./Members');
-const req = require('express/lib/request');
-// Route to get the members
-app.get('/api/members', (req, res) => res.json(members));
-
-// Getting single member 
-app.get('/api/members/:id', (req, res) => {
-    const found = members.some(member => member.id === parseInt(req.params.id));
-
-    if (found) {
-        res.json(members.filter(member => member.id === parseInt(req.params.id)));
-    }
-    else {
-        res.status(400).json({msg: `No member found with the id ${req.params.id}`})
-    }
-});
-
+//Running members api
+app.use('api/members','router/api/members');
 const PORT = process.env.PORT || 4300;
 
 app.listen(PORT, () => {
