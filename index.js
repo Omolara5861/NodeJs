@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const member = require('./Members')
 const app = express();
 
 // This is not n ideal way of loading files
@@ -19,7 +20,10 @@ app.use(express.urlencoded({extended: false}));
 
 // Render Template View
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {
+    title: 'Member API Rendered with Express Handlebars',
+    member
+})
 })
 
 //use() is the method used to include middlewares
