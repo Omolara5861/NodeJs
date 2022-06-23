@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: false}));
 
 // Handlebars Template Engine
 // Register `hbs.engine` with the Express app.
-    app.engine('handlebars', exphbs());
+    app.engine('handlebars', exphbs({defaultLayout: 'main'}));
     app.set('view engine', 'handlebars');
 
 // Render Template View
