@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: false}));
 // Render Template View
 app.get('/', (req, res) => {
     res.render('index', {
-    title: 'Member API Rendered with Express Handlebars',
+    title: 'Members API Rendered with Express Handlebars',
     members
 })
 })
