@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
         return res.status(400).json({msg: 'Pls include the name and email of the member'});
     }
     members.push(newMember);
-    res.json({msg: 'Member added successfully'})
+    res.json({msg: 'Member added successfully', members})
     
 })
 
